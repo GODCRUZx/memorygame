@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  user-select: none;
+}
+
+.board {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 2px solid blueviolet;
+  grid-gap: 0.5rem;
+  padding: 0.5rem;
+  overflow-y: auto;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+}
+
+.space {
+  flex: 1;
+}
+
+.card {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  background: black;
+  color: black;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 1px 1px 4px black;
+}
+
+.card.open {
+  background: white;
+}
+
+.card.match {
+  border: orangered 2px solid;
+  color: orangered;
+}
+
+.card.done {
+  color: white;
+  background: white;
+  border: white 2px;
+  box-shadow: 0 0 0;
+}
